@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+  <div class="row">
+    <a href="{{ absolute_url(asset('')) }}app_dev.php/model/create" class="btn btn-primary">CREATE MODEL</a>
+  </div>
+  <h1>VIEW MODELS</h1>
+  {% for success_message in app.session.flashbag.get('message') %}
+    <div class="alert alert-success">{{success_message }}</div>
+  {% endfor %}
+  <table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for model in models %}
+      <tr>
+        <th scope="row">{{ model.id }}</th>
+        <td>{{ model.title }}</td>
+        <td>{{ model.description }}</td>
+        <td>{{ model.category }}</td>
+        <td>
+          <a href="{{ absolute_url(asset('')) }}app_dev.php/model/view/{{ model.id }}" class="btn btn-primary btn-sm">View</a>
+          <a href="{{ absolute_url(asset('')) }}app_dev.php/model/update/{{ model.id }}" class="btn btn-success btn-sm">Edit</a>
+          <a href="{{ absolute_url(asset('')) }}app_dev.php/model/delete/{{ model.id }}" class="btn btn-danger btn-sm">Delete</a>
+        </td>
+      </tr>
+    {% else %}
+      <tr>
+        <td>No records Found!</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

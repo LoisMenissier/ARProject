@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+	<a href="{{ absolute_url(asset('')) }}app_dev.php/model" class="btn btn-primary btn-sm">
+		Back
+	</a>
+	<h3>UPDATE MODEL</h3>
+	{{ form_start(form) }}
+	{{ form_widget(form) }}
+	{{ form_end(form) }}
+</div>
+{% endblock %}

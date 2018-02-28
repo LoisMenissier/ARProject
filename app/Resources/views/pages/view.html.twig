@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+  <h3>VIEW MODEL</h3>
+  <div class="list-group">
+  	<a href="#" class="list-group-item active">
+  		MODEL
+  	</a>
+  	<p class="list-group-item">{{ model.title }}</p>
+  	<p class="list-group-item">{{ model.description }}</p>
+  	<p class="list-group-item">{{ model.category }}</p>
+  	<p class="list-group-item"><a href="{{ absolute_url(asset('')) }}app_dev.php/model" class="btn btn-primary btn-sm">Back</a></p>
+  </div>
+</div>
+{% endblock %}
