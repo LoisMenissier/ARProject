@@ -43,6 +43,13 @@ class Model
     private $category;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="author", type="string", length=255)
+     */
+    private $author;
+
+    /**
      * Get id
      *
      * @return int
@@ -99,5 +106,28 @@ class Model
     {
         return $this->description;
     }
-}
 
+    /**
+     * Set category
+     *
+     * @param string $category
+     *
+     * @return Model
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return string
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+}

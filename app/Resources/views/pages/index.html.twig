@@ -1,42 +1,55 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-<div class="container">
-  <div class="row">
-    <a href="{{ absolute_url(asset('')) }}app_dev.php/model/create" class="btn btn-primary">CREATE MODEL</a>
-  </div>
-  <h1>VIEW MODELS</h1>
-  {% for success_message in app.session.flashbag.get('message') %}
-    <div class="alert alert-success">{{success_message }}</div>
-  {% endfor %}
-  <table class="table table-striped table-hover">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Category</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for model in models %}
-      <tr>
-        <th scope="row">{{ model.id }}</th>
-        <td>{{ model.title }}</td>
-        <td>{{ model.description }}</td>
-        <td>{{ model.category }}</td>
-        <td>
-          <a href="{{ absolute_url(asset('')) }}app_dev.php/model/view/{{ model.id }}" class="btn btn-primary btn-sm">View</a>
-          <a href="{{ absolute_url(asset('')) }}app_dev.php/model/update/{{ model.id }}" class="btn btn-success btn-sm">Edit</a>
-          <a href="{{ absolute_url(asset('')) }}app_dev.php/model/delete/{{ model.id }}" class="btn btn-danger btn-sm">Delete</a>
-        </td>
-      </tr>
-    {% else %}
-      <tr>
-        <td>No records Found!</td>
-      </tr>
-    {% endfor %}
-  </tbody>
-</table>
+{% block body %}    
+<div id="all">
+{% include 'pages/inc/menu_left.html.twig' %}
+  <section class="single-page">
+    <div class="section-content bg-pattern white-screen">
+      <div class="container">
+          {% for success_message in app.session.flashbag.get('message') %}
+            <div class="alert alert-success">{{success_message }}</div>
+          {% endfor %}
+          <h1 class="page-top-heading">VIEW MODELS</h1>
+
+            <div class="blog-layout1">
+              {% for model in models %}
+              <div class="row">
+                    <article class="col-xxxl-4 col-lg-12 blog-item">
+                        <div class="blog-img blog-img-hover">
+                            <div class="blog-date">
+                                <div class="blog-date-day">{{ model.id }}</div>
+                                ID
+                            </div>
+                            <img alt="image" src="images/blog_grid/1.jpg">
+                            <div class="blog-img-detail">
+                                <div class="blog-img-detail-inner">
+                                    <div class="blog-img-detail-content">
+                                        <a class="icon-circle" href="images/blog_grid/1.jpg" data-lightbox="blog-item1-images"><i class="fa fa-search"></i></a>
+                                        <a class="icon-circle" href="blogpost.html"><i class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <h5><a href="{{ absolute_url(asset('')) }}model/view/{{ model.id }}">{{ model.title }}</a></h5>
+                            <p>{{ model.description }}</p>
+                            <div class="blog-details">By <a href="#">{{ model.author }}</a> <span class="delimiter-inline-alt"></span> In <a href="#">{{ model.category }}</a></div>
+                            <a href="{{ absolute_url(asset('')) }}model/view/{{ model.id }}" class="btn btn-primary btn-sm model">View</a>
+                            <a href="{{ absolute_url(asset('')) }}model/update/{{ model.id }}" class="btn btn-success btn-sm model">Edit</a>
+                            <a href="{{ absolute_url(asset('')) }}model/delete/{{ model.id }}" class="btn btn-danger btn-sm model">Delete</a>
+                        </div>
+                    </article>
+                {% else %}
+                  <tr>
+                    <td>No records Found!</td>
+                  </tr>
+                {% endfor %}
+                </div><!-- .row -->
+              </div><!-- .blog-layout1 -->
+          </div><!-- .container -->
+      </div><!-- .section-content -->
+  </section>
+
 {% endblock %}
+
+

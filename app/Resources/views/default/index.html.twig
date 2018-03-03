@@ -1,42 +1,175 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="container-fluid">
-        <div class="title-arch">ARProject<p>La réalité augmentée pour tout le monde.</p></div>
-
-        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 project wow animated animated4 fadeInLeft">
-            <div class="project-hover">
-                <h2>Présentation</h2>
-                
-                <hr />
-                <p>Prez'</p>
-                <a href="#">See Project</a>
-            </div>
+<div id="page-loader">
+    <div class="loader-square loader-square-1">
+        <div class="loader-square-content">
+            <div class="loader-square-inner bg-pattern white-screen"></div>
         </div>
-        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 project project-2 wow animated animated3 fadeInLeft">
-            <div class="project-hover">
-                <h2>Accès 2</h2>
-                <hr />
-                <p>Accès 2</p>
-                <a href="#">See Project</a>
-            </div>
-        </div>
-        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 project project-3 wow animated animated2 fadeInLeft">
-            <div class="project-hover">
-                <h2>Accès 3</h2>
-                <hr />
-                <p>Accès 3</p>
-                <a href="#">See Project</a>
-            </div>
-        </div>
-        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 project project-4 wow animated fadeInLeft">
-            <div class="project-hover">
-                <h2>Accès 4</h2>
-                <hr />
-                <p>Accès 4</p>
-                <a href="#">See Project</a>
-            </div>
-        </div>
-        <div class="clearfix"></div>
     </div>
+    <div class="loader-square loader-square-2">
+        <div class="loader-square-content">
+            <div class="loader-square-inner bg-pattern white-screen"></div>
+        </div>
+    </div>
+    <div class="loader-square loader-square-3">
+        <div class="loader-square-content">
+            <div class="loader-square-inner bg-pattern white-screen"></div>
+        </div>
+    </div>
+    <div class="loader-square loader-square-4">
+        <div class="loader-square-content">
+            <div class="loader-square-inner bg-pattern white-screen"></div>
+        </div>
+    </div>
+    <div class="loader-square loader-square-5">
+        <div class="loader-square-content">
+            <div class="loader-square-inner bg-pattern white-screen"></div>
+        </div>
+    </div>
+    <div class="loader-square loader-square-6">
+        <div class="loader-square-content">
+            <div class="loader-square-inner bg-pattern white-screen"></div>
+        </div>
+    </div>
+    <div class="loader-square loader-square-7">
+        <div class="loader-square-content">
+            <div class="loader-square-inner bg-pattern white-screen"></div>
+        </div>
+    </div>
+    <div class="loader-square loader-square-8">
+        <div class="loader-square-content">
+            <div class="loader-square-inner bg-pattern white-screen"></div>
+        </div>
+    </div>
+    <div class="loader-square loader-square-9">
+        <div class="loader-square-content">
+            <div class="loader-square-inner bg-pattern white-screen"></div>
+        </div>
+    </div>
+    <div class="loader-container">
+        <div class="loader-content">
+            <img class="loader-logo" alt="Smarty" src="images/logo2.png">
+        </div>
+    </div><!-- .loader-container -->
+    <div class="loader-footer">
+        <p>
+            Copyright &copy; 2014 <span class="text-white">Smarty</span>.<br>All
+            Rights Reserved.
+        </p>
+    </div>
+</div><!-- #page-loader -->
+    
+<div id="all">
+    
+    {% include 'pages/inc/menu_left.html.twig' %}
+    
+    <div class="ms-fullscreen-template" id="slider1-wrapper">
+        <!-- masterslider -->
+        <div class="master-slider ms-skin-default has-thumbnails" id="masterslider">
+            <div class="ms-slide ms-slide1" data-delay="7">
+                <div class="ms-slide-pattern bg-pattern white-screen-2"></div>
+                <img src="masterslider/blank.gif" data-src="images/slider/1.jpg" alt="lorem ipsum dolor sit">   
+                <div class="ms-layer ms-layer1 ms-text-size3 text-uppercase" data-type="text" data-effect="rotate3dtop(70,0,0,180)" data-duration="2000" data-ease="easeInOutQuint">
+                    <div class="container">
+                        <h2>ARProject</h2>
+                    </div>
+                </div>
+                <div class="ms-layer ms-layer2 visible-xxxl visible-xxl visible-xl visible-lg visible-md" data-type="text" data-effect="rotate3dbottom(-70,0,0,180)" data-duration="2000" data-ease="easeInOutQuint">
+                    <div class="container">
+                        <p>
+                            La réalité augmentée pour tout le monde. <br>
+                            Découvrez le monde de l'AR au travers de notre application !
+                        </p>
+                    </div>
+                </div>
+                <div class="ms-layer ms-layer3 ms-text-size7 visible-xxxl visible-xxl visible-xl visible-lg visible-md" data-type="text" data-effect="rotate3dbottom(-70,0,0,180)" data-duration="2000" data-delay="300" data-ease="easeInOutQuint">
+                    <div class="container">
+                        <a class="button" href="#">Découvrez <i class="fa fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+                <div class="ms-thumb"><img alt="img" src="images/slider_thumbs/1.jpg"></div>
+            </div><!-- .ms-slide -->
+            <div class="ms-slide ms-slide2 text-right" data-delay="7">
+                <div class="ms-slide-pattern bg-pattern white-screen-3"></div>
+                <img src="masterslider/blank.gif" data-src="images/slider/2.jpg" alt="lorem ipsum dolor sit">   
+                <div class="ms-layer ms-layer1 ms-text-size1" data-type="text" data-effect="skewleft(10,100,true)" data-duration="1500" data-ease="easeInOutQuint">
+                    <div class="container">
+                        <h2 class="text-highlight text-uppercase">Réalité</h2>
+                    </div>
+                </div>
+                <div class="ms-layer ms-layer2 ms-text-size5" data-type="text" data-effect="skewleft(10,100,true)" data-duration="1500" data-delay="300" data-ease="easeInOutQuint">
+                    <div class="container text-right">
+                        <h2 class="text-uppercase">
+                            Des images à en couper le souffle.<br>
+                            Une réalité plus que réelle !
+                        </h2>
+                    </div>
+                </div>
+                <div class="ms-layer ms-layer4 ms-text-size7 visible-xxxl visible-xxl visible-xl visible-lg visible-md" data-type="text" data-effect="skewleft(10,100,true)" data-duration="1500" data-delay="900" data-ease="easeInOutQuint">
+                    <div class="container">
+                        <a class="button" href="#">Découvrez <i class="fa fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+                <div class="ms-thumb"><img alt="img" src="images/slider_thumbs/2.jpg"></div>
+            </div><!-- .ms-slide -->
+            <div class="ms-slide ms-slide3 text-right" data-delay="7">
+                <div class="ms-slide-pattern bg-pattern white-screen"></div>
+                <img src="masterslider/blank.gif" data-src="images/slider/3.jpg" alt="lorem ipsum dolor sit">   
+                <div class="ms-layer ms-layer1 ms-text-size2" data-type="text" data-effect="rotateleft(5,long,br,true)" data-duration="1500" data-ease="easeInOutQuint">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xxl-6">
+                                <h2 class="text-uppercase text-highlight">Au quotidien</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ms-layer ms-layer2 ms-text-size5" data-type="text" data-effect="bottom(70, true)" data-duration="2000" data-delay="1000" data-ease="easeInOutQuint">
+                    <div class="container text-uppercase">
+                        <div class="row">
+                            <div class="col-xxl-6">
+                                <h3>
+                                    La réalité augmentée vous suit partout.<br>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ms-layer ms-layer3 ms-text-size7 visible-xxxl visible-xxl visible-xl visible-lg visible-md" data-type="text" data-effect="bottom(50, true)" data-duration="2000" data-delay="1400" data-ease="easeInOutQuint">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xxl-6">
+                                <a class="button" href="#">Découvrez <i class="fa fa-angle-double-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ms-thumb"><img alt="img" src="images/slider_thumbs/3.jpg"></div>
+            </div><!-- .ms-slide -->
+            <div class="ms-slide ms-slide4" data-delay="7">
+                <div class="ms-slide-pattern bg-pattern white-screen-5"></div>
+                <img src="masterslider/blank.gif" data-src="images/slider/4.jpg" alt="lorem ipsum dolor sit">   
+                <div class="ms-layer ms-layer1 ms-text-size2 text-uppercase" data-type="text" data-effect="rotate3dtop(70,0,0,180)" data-duration="2000" data-ease="easeInOutQuint">
+                    <div class="container">
+                        <h2>Complexité</h2>
+                    </div>
+                </div>
+                <div class="ms-layer ms-layer2 ms-text-size4 text-uppercase" data-type="text" data-effect="rotate3dright(-70,0,0,180)" data-duration="2000" data-ease="easeInOutQuint">
+                    <div class="container">
+                        <h3>Devenez le maître de la réalité augmentée.</h3>
+                    </div>
+                </div>
+                <div class="ms-layer ms-layer3 ms-text-size7 visible-xxxl visible-xxl visible-xl visible-lg visible-md" data-type="text" data-effect="rotate3dbottom(-70,0,0,180)" data-duration="2000" data-delay="300" data-ease="easeInOutQuint">
+                    <div class="container">
+                        <a class="button" href="#">Découvrez <i class="fa fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+                <div class="ms-thumb"><img alt="img" src="images/slider_thumbs/4.jpg"></div>
+            </div><!-- .ms-slide -->
+        </div>
+        <!-- end of masterslider -->
+    </div><!-- .ms-fullscreen-template -->
+    
+</div><!-- #all -->
 {% endblock %}

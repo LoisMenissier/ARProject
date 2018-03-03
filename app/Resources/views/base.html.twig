@@ -1,18 +1,55 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-            <script src="{{ asset('js/jquery.min.js') }}"></script>
-            <script src="{{ asset('js/boostrap.js') }}"></script>            
-        {% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" xml:lang="en-gb" class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!--[if lt IE 9]> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="jThemes Studio">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('ico/apple-touch-icon-144-precomposed.png') }}">
+    <link rel="shortcut icon" href="{{ asset('ico/favicon.ico') }}">
+
+    <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,900,900italic,700italic,400italic%7CFjalla+One' rel='stylesheet' type='text/css'>
+    
+    <!-- Icon-Font -->
+    <link rel="stylesheet" href="{{ asset('font-awesome/font-awesome/css/font-awesome.min.css') }}" type="text/css">
+    <!--[if IE 7]>
+        <link rel="stylesheet" href="font-awesome/font-awesome/css/font-awesome-ie7.min.css" type="text/css">
+    <![endif]-->
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('masterslider/style/masterslider.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('styles/main.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('styles/white.css') }}" type="text/css">
+    {% endblock %}
+
+    <title>{% block title %}ARproject{% endblock %}</title>
+</head>
+<body>
+    {% block body %}{% endblock %}
+    {% block javascripts %}
+        <script type="text/javascript" src="{{ asset('js/modernizr.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('pace/pace.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery-1.11.2.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('masterslider/jquery.easing.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('masterslider/masterslider.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery.nicescroll.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
+    {% endblock %}
+</body>
 </html>

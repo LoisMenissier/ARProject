@@ -36,10 +36,12 @@ class ModelController extends Controller
 			$title = $form['title']->getData();
 			$description = $form['description']->getData();
 			$category = $form['category']->getData();
+			$author = $this->getUser();
 
 			$model->setTitle($title);
 			$model->setDescription($description);
-			$model->setCategory($title);
+			$model->setCategory($category);
+			$model->setAuthor($author);
 
 			$em = $this->getDoctrine()->getManager();
 			$em->persist($model);
