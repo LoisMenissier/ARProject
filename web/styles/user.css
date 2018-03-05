@@ -1,0 +1,49 @@
+body{
+  font-family: 'Roboto', sans-serif;
+        
+}
+
+.center {
+    text-align: center;
+}
+label {
+    display:block;
+    position:relative;
+    padding-left:-120px;
+}
+#username{
+    margin: 0 auto;
+    width:30% /* value of your choice which suits your alignment */
+}
+#password{
+    margin: 0 auto;
+    width:30% /* value of your choice which suits your alignment */
+}
+#remember_me{
+    display: flex;
+    padding-right: 120px;
+}
+#_submit {
+    display: inline-block;
+font-weight: 400;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+border: 1px solid transparent;
+padding: .375rem .75rem;
+font-size: 1rem;
+line-height: 1.5;
+border-radius: .25rem;
+transition: .15s ease-in-out;
+    color: black;
+    background-color: beige;
+}
+#_submit:hover{
+
+    color: beige;
+    background-color: #000000;
+}

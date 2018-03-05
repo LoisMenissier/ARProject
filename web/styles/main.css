@@ -8,6 +8,10 @@
 6. Less Elements (including several extensions) (in .less file only)
 */
 /*== 1 HTML Elements ==*/
+.center_div{
+  margin: 0 auto;
+  width:80% /* value of your choice which suits your alignment */
+}
 ::-webkit-input-placeholder {
   color: #ffffff;
   opacity: 1;
